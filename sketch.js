@@ -21,8 +21,8 @@ function setup() {
       x[i] = width / 2;
       y[i] = height / 2;
     // Set the speeds to be random
-      xSpeed[i] = random(-5, 5);
-      ySpeed[i] = random(-5, 5);
+      xSpeed[i] = random(-5, 3);
+      ySpeed[i] = random(-5, 3);
     // Set the size to be random
       size[i] = random(10, 100);
     // Set the colors to be random
@@ -33,7 +33,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0);
+  background(250);
   
   // Iterate through a new for loop to change the properties in order to animate the balls
     for (let i = 0; i < ballCount; i++) {
@@ -52,8 +52,7 @@ function draw() {
       }
     // Set random R, G, B values
       fill(r[i], g[i], b[i]);
-    // Style to have no strokes
-    noStroke();
+      
     // Draw the bouncing balls
       ellipse(x[i], y[i], size[i], size[i]);
   }
